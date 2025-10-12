@@ -5,24 +5,24 @@ import { FaCertificate } from "react-icons/fa";
 const projectCategories = {
   fullStack: [
     {
-      name: "Hospital Food Delivery Management System",
+      name: "StudyGenie AI-Powered Study Companion",
       deployedLink:
-        "https://hospital-food-management-nrajus-projects.vercel.app/",
-      githubLink: "https://github.com/ShivaBoya/HospitalFood",
+        " https://study-genie-nine.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/StudyGenAI-project",
       image:
-        "https://img.freepik.com/premium-photo/nurse-medical-coat-is-holding-tray-with-breakfast_179755-5329.jpg?",
+        "http://res.cloudinary.com/dwlahv9mv/image/upload/v1760106358/st2_bcba2s.jpg",
       description:
-        "A full-stack application for managing hospital meal deliveries, patient diets, and real-time order tracking.Role-based dashboards for hospital managers, pantry staff, and delivery personnel.Real-time meal tracking with WebSocket integration",
+        "Study Genie — A responsive web app built with Vite + React, designed to help students master subjects through interactive tools, personalized study plans, and resources.",
       features: [
-        "Role-based dashboards for hospital managers, pantry staff, and delivery personnel",
-        "Real-time meal tracking with WebSocket integration",
-        "Secure authentication with JWT",
-        "Admin panel for meal and order management",
+        "Subject-wise Study Resources – Organized content for easy access",
+        "Interactive Learning Tools – Flashcards, quizzes, and practice modules",
+        "Personalized Study Plans – Helps students track progress and stay consistent",
+        "Progress Tracking Dashboard – Visual insights on study habits & completion",
       ],
       technologies: [
-        "React JS",
-        "Node.js",
-        "Express",
+        "Next.js + React",
+        "Next.js API Routes ",
+        "AI SDK (OpenAI / Anthropic / Cohere / Gemini)",
         "MongoDB",
         "JWT",
         "WebSocket",
@@ -30,26 +30,26 @@ const projectCategories = {
     },
 
     {
-      name: "Nxt Trendz (E-Commerce Clone)",
-      deployedLink: "https://nxttrendzrts.ccbp.tech/",
-      githubLink: "https://github.com/ShivaBoya/Nxt_TrendeZ_Website",
+      name: "Event-Management-System",
+      deployedLink: "https://event-management-azure-two.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/EventManagement_fullstackProject",
       image:
-        "https://th.bing.com/th/id/R.82ba779360b50f5c461e8592fb7473d1?rik=RcI3k0vhEbR%2fpg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fe-commerce-png-sell-your-products-and-services-online-1000.png&ehk=LZ2GD%2fGQ98UUOsXo6cKf4wz84A1wac5zM6LprYBb79A%3d&risl=&pid=ImgRaw&r=0",
+        "https://res.cloudinary.com/dwlahv9mv/image/upload/v1760106556/Screenshot_2025-10-10_195853_yij6pb.png",
       description:
-        "A secure, modern e-commerce platform inspired by Amazon and Flipkart, built with React JS.JWT authentication for secure user sessions.REST API integration for dynamic product data",
+        "Event Management Platform is a full-stack web application for planning, organizing, and managing events seamlessly. Built using modern web technologies.",
       features: [
-        "JWT authentication for secure user sessions",
-        "REST API integration for dynamic product data",
-        "Responsive design for seamless mobile and desktop experience",
-        "Product search, filtering, and sorting functionalities",
+        "Event Creation & Management – Hosts can create events, set dates/times, venues, descriptions, and ticketing options",
+        "Attendee Registration – Users can browse events, register, purchase tickets, and manage their bookings",
+        "Notifications & Reminders – Email or in-app alerts for upcoming events, ticket confirmations, and changes",
+        "User Profiles – Hosts and attendees have profiles to manage their events, preferences, and past history",
+        "Role-Based Access Control – Differentiated permissions for admins, hosts, and users"
       ],
-      technologies: ["React JS", "Node.js", "Express", "MongoDB", "JWT"],
-      credentials: { username: "raja", password: "raja@2021" },
+      technologies: ["React JS", "Node.js", "Express","TailwindCSS", "MongoDB", "JWT"],
     },
     {
       name: "ResumeBuilder Application",
       deployedLink: "https://resume-builder-krvx.vercel.app/",
-      githubLink: "https://github.com/ShivaBoya/ResumeBuilder",
+      githubLink: "",
       image:
         "https://img.freepik.com/premium-vector/job-profile-logo-resume-logo-template_658057-20.jpg", // Professional recruitment image
       description:
@@ -75,56 +75,73 @@ const projectCategories = {
   ],
   frontend: [
     {
-      name: "MemesHub",
-      deployedLink: "https://memeshub-project.netlify.app/",
-      githubLink: "https://github.com/ShivaBoya/MemesHub",
+      name: "Recipe Finder App",
+      deployedLink: "https://recipe-find-app-psi.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/Recipe-Find-App",
       image:
-        "https://wallpapers.com/images/hd/hacker-with-fawkes-mask-3d-vj9n88v8vk2l1gcx.jpg",
+        "https://res.cloudinary.com/dwlahv9mv/image/upload/v1760106807/r1_cbmzy3.png", // Professional recruitment image
       description:
-        "A feature-rich web application where users can create, browse, and share memes seamlessly, with interactive features for likes, comments, and trending content.Create, upload, and share memes with friends.Like, comment, and engage with trending memes.Mobile-responsive meme editor",
+        "Recipe Find App is a user-friendly web application designed to help users discover and explore a wide variety of recipes based on available ingredients. Built with React and Vite, it offers a seamless and responsive experience for cooking enthusiasts.",
       features: [
-        "Create, upload, and share memes with friends",
-        "Like, comment, and engage with trending memes",
-        "Mobile-responsive meme editor",
-        "Integrate payment using Razorpay for premium meme packs",
-        "Secure storage of user memes and profile data",
-      ],
-      technologies: ["HTML", "CSS", "JavaScript"],
-      certificate: {
-        link: "https://res.cloudinary.com/dumhixyxy/image/upload/Hack_fi28k6",
-        label: "Certificate",
-        icon: <FaCertificate />,
-      },
-    },
-    {
-      name: "Meals Explorer Website",
-      deployedLink: "https://meals-explorer-web.vercel.app/",
-      githubLink: "https://github.com/ShivaBoya/MealsExplorer",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/6/62/South_Indian_non-veg_Meals.jpg", // Professional recruitment image
-      description:
-        "A comprehensive web application for users to discover, search, and explore meals with real-time suggestions, category filters, sorting, and paginated browsing.Search and explore meals by name or ingredient.Filter meals by categories and cuisine types.View detailed meal information with images and instructions.Save favorite meals for quick access",
-      features: [
-        "Search and explore meals by name or ingredient",
-        "Filter meals by categories and cuisine types",
-        "Sort meals by popularity, rating, or preparation time",
-        "View detailed meal information with images and instructions",
+        "Ingredient-Based Recipe Search: Users can input available ingredients to find matching recipes.",
+        "Recipe Details: Each recipe includes a list of ingredients, preparation steps, and cooking time.",
+        "Responsive Design: Optimized for both desktop and mobile devices, ensuring accessibility on various screen sizes.",
+        "User-Friendly Interface: Clean and intuitive design for easy navigation and interaction.",
         "Save favorite meals for quick access",
       ],
-      technologies: ["HTML", "Css", "JavaScript"],
+      technologies: ["React, Vite", "TailwindCSS", "Vercel"],
     },
     {
-      name: "Movie Explorer Website",
-      deployedLink: "https://movie-explorer-two-beta.vercel.app/",
-      githubLink: "https://github.com/ShivaBoya/RevisionUnit/tree/main/sprint1/Contest/MovieExplorer",
+      name: "Health-Habbit-tracker",
+      deployedLink: "fst-practise-srgk.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/Health_Habit_Tracker",
       image:
-        "https://i.ytimg.com/vi/n5Qh7vSReiM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDumlQPZ6cai1t1s4mhCZX8qWd5_g", // Professional recruitment image
+        "https://res.cloudinary.com/dwlahv9mv/image/upload/v1760106976/h2_eemmxg.jpg", // Professional recruitment image
       description:
-        "A comprehensive web application for users to discover, search, and explore movies with real-time suggestions, year and language filters, sorting, and paginated browsing.",
+        "Health Habits Tracker — A personal wellness web app that helps users build and maintain healthy daily routines through goal setting and progress tracking with a clean, intuitive interface.",
       features: [
-        
+        "User Authentication: Secure login and sign-up functionality to personalize user experience.",
+        "Habit Creation: Users can create custom habits with specific goals and frequencies.",
+        "Progress Tracking: Visual indicators to track daily and cumulative progress of each habit.",
+        "Reminders: Set up daily reminders to stay on track with habit goals.",
+        "Responsive Design: Optimized for both desktop and mobile devices, ensuring accessibility on various screen sizes.",
+        "User-Friendly Interface: Clean and intuitive design for easy navigation and interaction."
       ],
-      technologies: ["React","HTML", "Tailwind CSS", "JavaScript"],
+      technologies: ["HTML", "Tailwind CSS", "JavaScript","firebase"],
+    },
+    {
+      name: "Weather App",
+      deployedLink: "https://react-weather-app-jet-ten.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/ReactWeatherApp",
+      image:
+        "https://res.cloudinary.com/dwlahv9mv/image/upload/v1760107207/c1_qpa45d.png", // Professional recruitment image
+      description:
+        "React Weather App is a user-friendly web application that provides real-time weather information based on user input. Built with React and Vite.",
+      features: [
+        "Real-Time Weather Data: Fetches current weather information based on user-entered city names.",
+        "Temperature Display: Shows temperature in Celsius and Fahrenheit.",
+        "Weather Conditions: Displays weather conditions such as clear, cloudy, rainy, etc.",
+        "Responsive Design: Optimized for both desktop and mobile devices, ensuring accessibility on various screen sizes.",
+        "User-Friendly Interface: Clean and intuitive design for easy navigation and interaction."
+      ],
+      technologies: ["React, Vite", "Tailwind CSS", "Vercel"],
+    },
+     {
+      name: "Rick-And-Morty",
+      deployedLink: "https://rick-livid.vercel.app/",
+      githubLink: "https://github.com/Prashanth9288/pokemon",
+      image:
+        "https://res.cloudinary.com/dwlahv9mv/image/upload/v1760108150/rick1_orqdje.jpg",
+      description:
+        "An interactive web application that allows users to explore characters, episodes, and locations from the Rick and Morty universe. Built using React and integrated with the official Rick and Morty API, the app offers a dynamic and engaging experience for fans and developers alike.",
+      features: [
+        "Character Exploration: Browse detailed profiles of various characters, including their names, species, and origins.",
+        "Episode Listings: View episodes by season, complete with titles and summaries.",
+        "Location Discovery: Explore different locations within the Rick and Morty multiverse",
+        "Pagination Controls: Navigate through extensive data sets using intuitive pagination.",
+        "Random Data Fetching: Access random entries from characters, episodes, or locations for a fun, surprise experience.",
+      ],
+      technologies: ["React-Vite", "Tailwind CSS", "Redux · Rick & Morty API"],
     },
   ],
   backend: [],

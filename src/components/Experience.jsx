@@ -210,35 +210,34 @@ const CertificateLink = styled.a`
 `;
 
 const experiences = [
-  // {
-  //   company: "Aptitude Guru Hem",
-  //   position: "Fullstack Developer Intern",
-  //   period: "06/2024 - 09/2024",
-  //   current: true,
-  //   description:
-  //     "Developed an affiliate marketing site for the Admin portal and GST Management System using the MERN stack with a focus on efficient data handling and user experience. Managed project tasks via Jira, handled deployment, integrated team tasks, and conducted code reviews.",
-  //   achievements: [
-  //     "Ensured code quality, security, and maintainability using SonarQube for static analysis",
-  //     "Improved user experience through efficient data handling",
-  //     "Managed team collaboration and productivity by handling task integration and code reviews",
-  //   ],
-  //   certification:
-  //     "https://res.cloudinary.com/dwiq4s5ut/image/upload/v1731597421/Screenshot_2024-11-12_220411_iuja2s.png",
-  // },
-  {
-    company: "Masai",
-    position: "Masai Hackathon Edition",
-    period: "48 Hours",
+ {
+    company: "Sattva Infotech",
+    position: "Full-Stack Developer Intern",
+    period: "01/2024 – 05/2024",
     current: false,
     description:
-      "Developed responsive user interfaces and interactive front-end features for MemeHub, enabling users to create, browse, and engage with memes using HTML, CSS, and JavaScript.",
+      "Worked on sample projects gaining hands-on experience with backend development and various web technologies.",
     achievements: [
-      "Developed MemesHub, a responsive web application for creating, browsing, and sharing memes using HTML, CSS, and JavaScript",
-      "Implemented interactive features such as likes, comments, and trending content to enhance user engagement",
-      "Ensured responsive design and smooth user experience across devices",
+      "Developed sample projects including a To-Do Application, Notes Management Platform, and contributed to a Food Booking Application",
+      "Gained practical experience with backend development and integration",
+      "Enhanced understanding of teamwork and version control using Git",
     ],
-    certification:
-      "https://res.cloudinary.com/dumhixyxy/image/upload/Hack_fi28k6",
+     certification: "https://res.cloudinary.com/dwlahv9mv/image/upload/v1759995152/python_full_stack_sattva_r9jvrc.jpg",
+    internId: "SIT-2023-1306"
+  },
+  {
+    company: "Sattva Infotech",
+    position: "Frontend Web Developer Intern",
+    period: "08/2023 – 10/2023",
+    current: false,
+    description: "Developed responsive user interfaces and interactive front-end functionality for e-commerce and corporate website projects using modern web technologies.",
+    achievements: [
+      "Implemented responsive interfaces using HTML, CSS, JavaScript, and React",
+      "Collaborated with cross-functional teams to translate business requirements into digital solutions",
+      "Gained comprehensive experience in front-end web development project lifecycle"
+    ],
+    certification: "https://res.cloudinary.com/dwlahv9mv/image/upload/v1759995395/front_end__sattva_eegj6h.jpg",
+    internId: "SIT-2023-2595"
   },
   {
     company: "Python FullStack",
@@ -255,7 +254,7 @@ const experiences = [
       "Collaborated on real-world projects demonstrating proficiency in both client-side and server-side development",
     ],
     certification:
-      "https://drive.google.com/file/d/1ZvrSxEuSU_tJuriCivXk3CdOCpXHEda-/view?usp=sharing",
+      "https://res.cloudinary.com/dwlahv9mv/image/upload/v1759995935/MF_INTERNSHIP_CERTIFICATE_-_1-116_page-0001_zonxua.jpg",
   },
 ];
 

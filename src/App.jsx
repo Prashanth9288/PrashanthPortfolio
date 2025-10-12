@@ -227,7 +227,7 @@ const App = () => {
         <NavWrapper>
           <Logo href="#home">
             <img
-              src="https://res.cloudinary.com/dumhixyxy/image/upload/ChatGPT_Image_Aug_21_2025_11_57_22_PM_dqam83"
+              src="https://res.cloudinary.com/dwlahv9mv/image/upload/v1760102437/p_tjqzr0.jpg"
               alt="Logo"
               style={{ width: "30px", height: "30px", objectFit: "contain" }}
             />

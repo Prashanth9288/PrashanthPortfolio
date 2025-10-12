@@ -349,7 +349,7 @@ const Home = () => {
 
         <ImageContainer>
           <img
-            src=""
+            src="https://res.cloudinary.com/dwlahv9mv/image/upload/v1760093086/prashanth_profile_xogcot.jpg"
             alt="Uppara Prashanth"
           />
         </ImageContainer>
