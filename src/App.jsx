@@ -210,12 +210,12 @@ const App = () => {
   // ✅ Function to open + download resume
   const handleResumeClick = () => {
     // open in new tab
-    window.open("/MyResume.pdf", "_blank");
+    window.open("/UPPARA-PRASHANTH-Resume.pdf", "_blank");
 
     // trigger download
     const link = document.createElement("a");
-    link.href = "/MyResume.pdf";
-    link.download = "MyResume.pdf";
+    link.href = "/UPPARA-PRASHANTH-Resume.pdf";
+    link.download = "UPPARA-PRASHANTH-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

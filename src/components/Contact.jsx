@@ -623,7 +623,7 @@ const Contact = () => {
           <Detail>
             <FaLinkedin />
             <a
-              href="https://www.linkedin.com/in/prashanthuppara"
+              href="https://www.linkedin.com/in/prashanth-uppara/"
               target="_blank"
               rel="noopener noreferrer"
             >

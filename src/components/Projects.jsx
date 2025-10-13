@@ -49,7 +49,7 @@ const projectCategories = {
     {
       name: "ResumeBuilder Application",
       deployedLink: "https://resume-builder-krvx.vercel.app/",
-      githubLink: "",
+      githubLink: "https://github.com/Prashanth9288/ResumeBuilder",
       image:
         "https://img.freepik.com/premium-vector/job-profile-logo-resume-logo-template_658057-20.jpg", // Professional recruitment image
       description:
