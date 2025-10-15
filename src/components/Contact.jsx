@@ -421,18 +421,19 @@
 //     </Container>
 //   );
 // }
+
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
 
-// Reuse shimmer effect for consistency
+// Subtle shimmer background for depth
 const shimmer = keyframes`
   0% { background-position: -1000px 0; }
   100% { background-position: 1000px 0; }
 `;
 
 const Section = styled.section`
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem 3rem 1rem;
   background: transparent;
   color: white;
   position: relative;
@@ -452,57 +453,66 @@ const Section = styled.section`
     );
     pointer-events: none;
   }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   position: relative;
   z-index: 1;
 
   @media (min-width: 768px) {
     grid-template-columns: 1.2fr 0.8fr; /* form left, info right */
+    gap: 1.8rem;
   }
 `;
 
 const Box = styled.div`
-  background-color: #1f2937; /* gray-800 */
-  padding: 2rem;
-  border-radius: 1rem;
-  border: 1px solid #374151; /* border for separation */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #1f2937;
+  padding: 1.8rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
 
   &:hover {
     border-color: #14b8a6;
-    box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
-    transition: 0.3s ease;
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.25);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
   }
 `;
 
 const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #14b8a6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 `;
 
 const Detail = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
 
   svg {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #14b8a6;
   }
 
   a,
   p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #e5e7eb;
     text-decoration: none;
     transition: 0.3s ease;
@@ -516,57 +526,61 @@ const Detail = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 `;
 
 const Heading = styled.h2`
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 
   span {
     color: #14b8a6;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Input = styled.input`
-  padding: 1rem; /* increased height */
-  border-radius: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
   background-color: #374151;
   border: 1px solid #4b5563;
   color: white;
   outline: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: 0.3s ease;
 
   &:focus {
     border-color: #14b8a6;
-    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.3);
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.25);
   }
 `;
 
 const TextArea = styled.textarea`
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
   background-color: #374151;
   border: 1px solid #4b5563;
   color: white;
   outline: none;
-  min-height: 150px; /* slightly bigger */
+  min-height: 120px;
   resize: vertical;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: 0.3s ease;
 
   &:focus {
     border-color: #14b8a6;
-    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.3);
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.25);
   }
 `;
 
 const Button = styled.button`
-  padding: 0.85rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
   background-color: #14b8a6;
   color: white;
   font-weight: 600;
@@ -576,17 +590,17 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  font-size: 1rem;
+  gap: 0.6rem;
+  font-size: 0.95rem;
 
   &:hover {
     background-color: #2dd4bf;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(20, 184, 166, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(20, 184, 166, 0.25);
   }
 
   svg {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 
@@ -617,7 +631,9 @@ const Contact = () => {
 
           <Detail>
             <FaEnvelope />
-            <a href="mailto:prashanth939288@gmail.com">prashanth939288@gmail.com</a>
+            <a href="mailto:prashanth939288@gmail.com">
+              prashanth939288@gmail.com
+            </a>
           </Detail>
 
           <Detail>

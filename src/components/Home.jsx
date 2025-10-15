@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaArrowRight, FaCode, FaServer } from "react-icons/fa";
 import styled, { keyframes } from "styled-components";
 
+// 🔹 Animations
 const float = keyframes`
   0% { transform: translateY(0px) }
   50% { transform: translateY(-10px) }
@@ -9,14 +10,8 @@ const float = keyframes`
 `;
 
 const fadeInUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 `;
 
 const shimmer = keyframes`
@@ -24,15 +19,17 @@ const shimmer = keyframes`
   100% { background-position: 1000px 0; }
 `;
 
+// 🔹 Main Container
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 60vh; /* ↓ Reduced height */
   background-color: transparent;
   position: relative;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -49,27 +46,28 @@ const HomeContainer = styled.div`
   }
 `;
 
+// 🔹 Layout Wrapper
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1400px;
-  gap: 2rem;
+  gap: 1.5rem; /* ↓ Reduced spacing */
   position: relative;
   z-index: 1;
 
   @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 4rem; /* ↓ Slightly reduced */
   }
 `;
 
 const TextSection = styled.div`
   animation: ${fadeInUp} 1s ease-out;
-  padding: 1.5rem;
-  max-width: 700px;
+  padding: 1.25rem; /* ↓ Reduced padding */
+  max-width: 650px;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -80,28 +78,28 @@ const TextSection = styled.div`
 const Greeting = styled.div`
   font-size: 1.25rem;
   color: #64ffda;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-family: "Fira Code", monospace;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out forwards;
 `;
 
 const Title = styled.h1`
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   font-weight: 800;
   background: linear-gradient(45deg, #64ffda, #64ffda);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.2s forwards;
 `;
 
 const Subtitle = styled.h2`
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   font-weight: 600;
   color: #64ffda;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.4s forwards;
 `;
@@ -109,8 +107,8 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   font-size: 1rem;
   color: #cbd5e1;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.6s forwards;
 
@@ -120,7 +118,7 @@ const Description = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -128,13 +126,13 @@ const TechStack = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.8s forwards;
 
   div {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.9rem;
     background: rgba(100, 255, 218, 0.1);
     border-radius: 9999px;
     color: #64ffda;
@@ -153,8 +151,8 @@ const TechStack = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -163,8 +161,8 @@ const ImageContainer = styled.div`
     ${float} 6s ease-in-out infinite;
 
   @media (min-width: 768px) {
-    width: 300px;
-    height: 350px;
+    width: 260px;
+    height: 300px;
   }
 
   &::before {
@@ -200,7 +198,7 @@ const ButtonContainer = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 1s forwards;
 
@@ -210,7 +208,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.8rem;
   font-weight: 600;
   font-size: 1rem;
   color: ${(props) => (props.primary ? "#000000" : "#64ffda")};
@@ -254,33 +252,6 @@ const Button = styled.button`
   }
 `;
 
-const SocialLinks = styled.div`
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 3rem;
-  opacity: 0;
-  animation: ${fadeInUp} 0.5s ease-out 1.2s forwards;
-
-  a {
-    font-size: 1.75rem;
-    color: #cbd5e1;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(100, 255, 218, 0.1);
-
-    &:hover {
-      color: #64ffda;
-      transform: translateY(-3px);
-      background: rgba(100, 255, 218, 0.2);
-    }
-  }
-`;
-
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -288,14 +259,10 @@ const Home = () => {
     setIsVisible(true);
   }, []);
 
-  // 🔹 Function to open resume in new tab and download automatically
   const handleResumeClick = () => {
     const fileUrl = "UPPARA-PRASHANTH-Resume.pdf"; // Place file in public folder
-
-    // Open in new tab
     window.open(fileUrl, "_blank");
 
-    // Trigger download
     const link = document.createElement("a");
     link.href = fileUrl;
     link.download = "UPPARA-PRASHANTH-Resume.pdf";
@@ -309,25 +276,22 @@ const Home = () => {
       <ContentWrapper>
         <TextSection>
           <Greeting>👋 Hello, I'm</Greeting>
-          <Title>Uppara Prashanth </Title>
+          <Title>Uppara Prashanth</Title>
           <Subtitle>Full Stack Developer & Problem Solver</Subtitle>
           <Description>
             I'm a passionate developer focused on creating{" "}
-            <strong>exceptional digital experiences</strong>. Specializing in
-            building robust, scalable web applications using modern
-            technologies. With expertise in both frontend and backend
-            development, I transform complex problems into elegant solutions
-            that prioritize <strong>user experience</strong> and{" "}
-            <strong>performance</strong>. I am also passionate about{" "}
-            <strong>DSA and problem-solving</strong>, constantly honing my
-            skills to write efficient algorithms and tackle challenging coding
-            problems with creativity and precision.
+            <strong>exceptional digital experiences</strong>. I build robust,
+            scalable web applications using modern technologies. With expertise
+            in both frontend and backend development, I love transforming complex
+            problems into elegant solutions that prioritize{" "}
+            <strong>user experience</strong> and{" "}
+            <strong>performance</strong>. I’m also passionate about{" "}
+            <strong>DSA and problem-solving</strong>.
           </Description>
 
           <TechStack>
             <div>
-              <FaCode />
-              Full Stack Developer
+              <FaCode /> Full Stack Developer
             </div>
             <div>
               <FaCode /> Frontend Developer
