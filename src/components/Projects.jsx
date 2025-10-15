@@ -14,12 +14,15 @@ const projectCategories = {
       description:
         "Study Genie — A responsive web app built with Vite + React, designed to help students master subjects through interactive tools and personalized plans.",
       technologies: [
-        "Next.js + React",
-        "Next.js API Routes",
-        "AI SDK (OpenAI / Anthropic / Cohere / Gemini)",
+        "React",
+        "API Routes",
+        "AI(Open AI)",
         "MongoDB",
         "JWT",
-        "WebSocket",
+        "Node.js",
+        "Html",
+        "Tailwind css",
+        "Razorpay",
       ],
     },
     {
