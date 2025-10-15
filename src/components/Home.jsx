@@ -163,6 +163,7 @@ const ImageContainer = styled.div`
   @media (min-width: 768px) {
     width: 260px;
     height: 300px;
+    transform: translateX(-20px); /* moves slightly to the left */
   }
 
   &::before {
@@ -192,6 +193,7 @@ const ImageContainer = styled.div`
     }
   }
 `;
+
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -313,7 +315,7 @@ const Home = () => {
 
         <ImageContainer>
           <img
-            src="https://res.cloudinary.com/dwlahv9mv/image/upload/v1760528460/profilepic_ogepjw.jpg"
+            src="https://res.cloudinary.com/dwlahv9mv/image/upload/v1760532113/portfoliorec_hoy0xk.jpg"
             alt="Uppara Prashanth"
           />
         </ImageContainer>
