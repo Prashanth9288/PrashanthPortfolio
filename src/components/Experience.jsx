@@ -10,7 +10,7 @@ import {
 const fadeInUp = keyframes`
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -19,19 +19,19 @@ const fadeInUp = keyframes`
 `;
 
 const ExperienceSection = styled.section`
-  padding: 1rem 2rem 2rem 2rem; /* 🔥 Reduced top padding */
-  min-height: 70vh;
+  padding: 0.8rem 1rem 1.5rem 1rem;
+  min-height: 60vh;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 1rem 1rem 1.5rem 1rem;
+    padding: 0.6rem 0.8rem 1.2rem 0.8rem;
     min-height: auto;
   }
 `;
 
 const Container = styled.div`
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -44,28 +44,28 @@ const Container = styled.div`
 const SectionTitle = styled.h2`
   text-align: center;
   color: #64ffda;
-  font-size: 2.6rem;
-  margin-bottom: 2.2rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  margin-top: 0; /* 🔥 No extra space above */
+  margin-top: 0;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -8px;
+    bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 3px;
+    width: 90px;
+    height: 2px;
     background: linear-gradient(90deg, transparent, #64ffda, transparent);
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 1.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
 
     &::after {
-      width: 90px;
+      width: 70px;
     }
   }
 `;
@@ -73,31 +73,31 @@ const SectionTitle = styled.h2`
 const ExperienceGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.4rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 `;
 
 const ExperienceCard = styled.div`
   background: rgba(23, 34, 52, 0.7);
-  border-radius: 12px;
-  padding: 1.6rem;
+  border-radius: 10px;
+  padding: 1.2rem;
   position: relative;
   transition: all 0.3s ease;
   border: 1px solid rgba(100, 255, 218, 0.1);
-  backdrop-filter: blur(10px);
-  animation: ${fadeInUp} 0.6s ease forwards;
+  backdrop-filter: blur(8px);
+  animation: ${fadeInUp} 0.5s ease forwards;
 
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 768px) {
-    padding: 1.2rem;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 8px;
   }
 `;
 
@@ -105,12 +105,12 @@ const CompanyHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.8rem;
+    gap: 0.5rem;
   }
 `;
 
@@ -122,24 +122,24 @@ const CompanyInfo = styled.div`
 
 const Company = styled.h3`
   color: #64ffda;
-  font-size: 1.6rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.4rem;
 
   @media (max-width: 768px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
 const Position = styled.h4`
   color: #fff;
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -147,23 +147,23 @@ const Timeline = styled.div`
   display: flex;
   align-items: center;
   color: #8892b0;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
 
   @media (max-width: 768px) {
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 `;
 
 const Description = styled.p`
   color: #a8b2d1;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  font-size: 0.98rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 `;
 
@@ -176,16 +176,16 @@ const AchievementItem = styled.li`
   display: flex;
   align-items: center;
   color: #a8b2d1;
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
 
   svg {
     color: #64ffda;
-    margin-right: 0.6rem;
+    margin-right: 0.4rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -195,11 +195,11 @@ const CertificateLink = styled.a`
   color: #64ffda;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
 
   svg {
-    margin-right: 0.4rem;
+    margin-right: 0.3rem;
   }
 
   &:hover {
@@ -282,7 +282,7 @@ const Experience = () => (
             </CompanyHeader>
 
             <Timeline>
-              <FaCalendarAlt style={{ marginRight: "0.4rem" }} />
+              <FaCalendarAlt style={{ marginRight: "0.3rem" }} />
               {exp.period}
             </Timeline>
 

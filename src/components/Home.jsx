@@ -5,18 +5,18 @@ import styled, { keyframes } from "styled-components";
 // 🔹 Animations
 const float = keyframes`
   0% { transform: translateY(0px) }
-  50% { transform: translateY(-10px) }
+  50% { transform: translateY(-5px) }
   100% { transform: translateY(0px) }
 `;
 
 const fadeInUp = keyframes`
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 `;
 
 const shimmer = keyframes`
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
 `;
 
 // 🔹 Main Container
@@ -25,7 +25,7 @@ const HomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh; /* ↓ Reduced height */
+  min-height: 50vh;
   background-color: transparent;
   position: relative;
   overflow: hidden;
@@ -37,11 +37,7 @@ const HomeContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgba(100, 255, 218, 0.03) 0%,
-      transparent 80%
-    );
+    background: radial-gradient(circle at 50% 50%, rgba(100, 255, 218, 0.03) 0%, transparent 80%);
     pointer-events: none;
   }
 `;
@@ -51,23 +47,23 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 1400px;
-  gap: 1.5rem; /* ↓ Reduced spacing */
+  width: 90%;
+  max-width: 1200px;
+  gap: 1.5rem;
   position: relative;
   z-index: 1;
 
   @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
-    gap: 4rem; /* ↓ Slightly reduced */
+    gap: 3rem;
   }
 `;
 
 const TextSection = styled.div`
-  animation: ${fadeInUp} 1s ease-out;
-  padding: 1.25rem; /* ↓ Reduced padding */
-  max-width: 650px;
+  animation: ${fadeInUp} 0.8s ease-out;
+  padding: 1rem;
+  max-width: 600px;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -76,7 +72,7 @@ const TextSection = styled.div`
 `;
 
 const Greeting = styled.div`
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #64ffda;
   margin-bottom: 0.75rem;
   font-family: "Fira Code", monospace;
@@ -85,18 +81,18 @@ const Greeting = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   background: linear-gradient(45deg, #64ffda, #64ffda);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.2s forwards;
 `;
 
 const Subtitle = styled.h2`
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 600;
   color: #64ffda;
   margin-bottom: 1rem;
@@ -105,9 +101,9 @@ const Subtitle = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #cbd5e1;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.6s forwards;
@@ -118,7 +114,7 @@ const Description = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 `;
 
@@ -126,21 +122,21 @@ const TechStack = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 0.8s forwards;
 
   div {
-    padding: 0.4rem 0.9rem;
+    padding: 0.4rem 0.8rem;
     background: rgba(100, 255, 218, 0.1);
     border-radius: 9999px;
     color: #64ffda;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     transition: all 0.3s ease;
 
     &:hover {
@@ -151,19 +147,18 @@ const TechStack = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 180px;
-  height: 180px;
-  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
   opacity: 0;
-  animation: ${fadeInUp} 0.5s ease-out 1s forwards,
-    ${float} 6s ease-in-out infinite;
+  animation: ${fadeInUp} 0.5s ease-out 1s forwards, ${float} 5s ease-in-out infinite;
 
   @media (min-width: 768px) {
-    width: 260px;
+    width: 250px;
     height: 300px;
-    transform: translateX(-20px); /* moves slightly to the left */
+    transform: translateX(-15px);
   }
 
   &::before {
@@ -171,10 +166,9 @@ const ImageContainer = styled.div`
     position: absolute;
     inset: 0;
     border: 2px solid transparent;
-    border-radius: 20px;
+    border-radius: 15px;
     background: linear-gradient(45deg, #64ffda, transparent, #64ffda) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-      linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -185,7 +179,7 @@ const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.5s ease;
 
     &:hover {
@@ -194,13 +188,12 @@ const ImageContainer = styled.div`
   }
 `;
 
-
 const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   opacity: 0;
   animation: ${fadeInUp} 0.5s ease-out 1s forwards;
 
@@ -210,17 +203,16 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 0.9rem 1.8rem;
+  padding: 0.8rem 1.5rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${(props) => (props.primary ? "#000000" : "#64ffda")};
-  background: ${(props) =>
-    props.primary ? "linear-gradient(45deg, #64ffda, #64ffda)" : "transparent"};
+  background: ${(props) => (props.primary ? "linear-gradient(45deg, #64ffda, #64ffda)" : "transparent")};
   border: ${(props) => (props.primary ? "none" : "2px solid #64ffda")};
   border-radius: 9999px;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
@@ -234,19 +226,14 @@ const Button = styled.button`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      45deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transform: translateX(-100%);
     transition: transform 0.5s ease;
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(100, 255, 218, 0.15);
 
     &::before {
       transform: translateX(100%);
@@ -281,26 +268,13 @@ const Home = () => {
           <Title>Uppara Prashanth</Title>
           <Subtitle>Full Stack Developer & Problem Solver</Subtitle>
           <Description>
-            I'm a passionate developer focused on creating{" "}
-            <strong>exceptional digital experiences</strong>. I build robust,
-            scalable web applications using modern technologies. With expertise
-            in both frontend and backend development, I love transforming complex
-            problems into elegant solutions that prioritize{" "}
-            <strong>user experience</strong> and{" "}
-            <strong>performance</strong>. I’m also passionate about{" "}
-            <strong>DSA and problem-solving</strong>.
+            I'm a passionate developer focused on creating <strong>exceptional digital experiences</strong>. I build robust, scalable web applications using modern technologies. With expertise in both frontend and backend development, I love transforming complex problems into elegant solutions that prioritize <strong>user experience</strong> and <strong>performance</strong>. I’m also passionate about <strong>DSA and problem-solving</strong>.
           </Description>
 
           <TechStack>
-            <div>
-              <FaCode /> Full Stack Developer
-            </div>
-            <div>
-              <FaCode /> Frontend Developer
-            </div>
-            <div>
-              <FaServer /> Backend Developer
-            </div>
+            <div><FaCode /> Full Stack Developer</div>
+            <div><FaCode /> Frontend Developer</div>
+            <div><FaServer /> Backend Developer</div>
           </TechStack>
 
           <ButtonContainer>

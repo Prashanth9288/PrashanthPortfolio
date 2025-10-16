@@ -4,26 +4,26 @@ import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const fadeIn = `
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
   }
 `;
 
 const Section = styled.section`
-  min-height: 80vh; /* 🔹 Decreased height from 100vh */
+  min-height: 65vh; /* 🔹 Reduced from 80vh */
   background: transparent;
-  padding: 0rem 2rem 2rem 2rem; /* 🔹 Reduced top & bottom padding */
+  padding: 0.5rem 1rem 1.5rem 1rem; /* 🔹 Reduced padding */
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 0rem 1rem 2rem 1rem;
+    padding: 0.5rem 0.8rem 1.2rem 0.8rem;
     min-height: auto;
   }
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
+  max-width: 900px; /* 🔹 Reduced width */
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -32,35 +32,39 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem; /* 🔹 Smaller font */
+  font-weight: 700;
   text-align: center;
   color: #64ffda;
-  margin-bottom: 2.5rem; /* 🔹 Reduced space below title */
+  margin-bottom: 2rem; /* 🔹 Reduced space */
   position: relative;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
+    width: 80px; /* 🔹 Narrower */
+    height: 2px;
     background: linear-gradient(90deg, transparent, #64ffda, transparent);
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+
+    &::after {
+      width: 60px;
+    }
   }
 `;
 
 const Timeline = styled.div`
   position: relative;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 
   &::before {
     content: '';
@@ -80,16 +84,16 @@ const Timeline = styled.div`
 const TimelineItem = styled.div`
   display: flex;
   justify-content: ${props => props.isEven ? 'flex-start' : 'flex-end'};
-  padding: 1.5rem 0; /* 🔹 Reduced padding */
+  padding: 1rem 0; /* 🔹 Reduced */
   width: 100%;
-  animation: fadeIn 0.6s ease-out forwards;
-  animation-delay: ${props => props.index * 0.2}s;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: ${props => props.index * 0.15}s;
   opacity: 0;
 
   @media (max-width: 768px) {
     justify-content: flex-start;
-    padding-left: 20px;
-    width: calc(100% - 20px);
+    padding-left: 15px;
+    width: calc(100% - 15px);
   }
 
   ${fadeIn}
@@ -99,38 +103,38 @@ const Card = styled.div`
   width: 45%;
   background: #141414;
   border: 1px solid rgba(100, 255, 218, 0.1);
-  border-radius: 16px;
-  padding: 1.25rem; /* 🔹 Slightly smaller padding */
+  border-radius: 12px;
+  padding: 1rem; /* 🔹 Reduced */
   position: relative;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 768px) {
-    width: calc(100% - 20px);
-    margin-left: 20px;
-    padding: 1rem;
+    width: calc(100% - 15px);
+    margin-left: 15px;
+    padding: 0.8rem;
   }
 
   &::before {
     content: '';
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: #64ffda;
     border-radius: 50%;
     top: 50%;
-    ${props => props.isEven ? 'right: -40px' : 'left: -40px'};
+    ${props => props.isEven ? 'right: -35px' : 'left: -35px'};
     transform: translateY(-50%);
-    border: 3px solid #1e293b;
+    border: 2px solid #1e293b;
     z-index: 1;
 
     @media (max-width: 768px) {
-      left: -25px;
+      left: -20px;
       width: 10px;
       height: 10px;
     }
@@ -138,46 +142,43 @@ const Card = styled.div`
 `;
 
 const DegreeTitle = styled.h3`
-  font-size: 1.15rem;
+  font-size: 1rem; /* 🔹 Smaller */
   color: #fff;
-  margin-bottom: 0.4rem;
-  word-wrap: break-word;
+  margin-bottom: 0.3rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 `;
 
 const Institution = styled.h4`
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #64ffda;
-  margin-bottom: 1rem;
-  word-wrap: break-word;
+  margin-bottom: 0.8rem;
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 `;
 
 const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   color: #94a3b8;
-  font-size: 0.8rem;
-  overflow: hidden;
+  font-size: 0.75rem;
 
   svg {
     color: #64ffda;
@@ -187,19 +188,19 @@ const InfoItem = styled.div`
 
 const StatusBadge = styled.span`
   position: absolute;
-  top: -10px;
-  right: 20px;
+  top: -8px;
+  right: 15px;
   background: linear-gradient(135deg, #64ffda, #64ffda);
   color: white;
-  padding: 0.35rem 0.7rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
 
   @media (max-width: 768px) {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.7rem;
-    top: -8px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+    top: -6px;
     right: 10px;
   }
 `;
